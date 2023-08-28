@@ -3,7 +3,6 @@ import axios from 'axios';
 
 function QuoteFetcher() {
   const [quotes, setQuotes] = useState([]);
-  const quotesPerPage = 5; // Change this to the desired number of quotes per page
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -12,7 +11,7 @@ function QuoteFetcher() {
 
   const fetchQuotes = async () => {
     try {
-      const response = await axios.get(`https://api.quotable.io/quotes?count=${quotesPerPage}&page=${currentPage}`);
+      const response = await axios.get(`https://api.quotable.io/quotes?page=${currentPage}`);
       setQuotes(response.data.results);
     } catch (error) {
       console.error('Error fetching quotes:', error);
@@ -35,8 +34,8 @@ function QuoteFetcher() {
       <div className="quote-list">
         {quotes.map((quote, index) => (
           <div key={index} className="quote">
-            <p>"{quote.content}"</p>
-            <p>- {quote.author}</p>
+            <p className="quote-content">"{quote.content}"</p>
+            <p className="quote-author">- {quote.author}</p> 
           </div>
         ))}
       </div>
