@@ -28,6 +28,10 @@ function QuoteFetcher() {
     }
   };
 
+    const handleStarClick = (quoteId) => {
+    console.log(`Quote ${quoteId} marked as favorite`);
+  };
+
   return (
     <div className="quote-generator">
       <h1>Random Quote Generator</h1>
@@ -35,7 +39,10 @@ function QuoteFetcher() {
         {quotes.map((quote, index) => (
           <div key={index} className="quote">
             <p className="quote-content">"{quote.content}"</p>
-            <p className="quote-author">- {quote.author}</p> 
+            <div className="button-and-author">
+              <button onClick={() => handleStarClick(quote._id)}>Star</button>
+              <p className="quote-author">- {quote.author}</p> 
+            </div>
           </div>
         ))}
       </div>
