@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import StarButton from './StarButton';
 import axios from 'axios';
 
 function QuoteFetcher() {
@@ -28,10 +29,6 @@ function QuoteFetcher() {
     }
   };
 
-    const handleStarClick = (quoteId) => {
-    console.log(`Quote ${quoteId} marked as favorite`);
-  };
-
   return (
     <div className="quote-generator">
       <h1>Random Quote Generator</h1>
@@ -40,7 +37,7 @@ function QuoteFetcher() {
           <div key={index} className="quote">
             <p className="quote-content">"{quote.content}"</p>
             <div className="button-and-author">
-              <button onClick={() => handleStarClick(quote._id)}>Star</button>
+              <StarButton quoteId={quote._id}/>
               <p className="quote-author">- {quote.author}</p> 
             </div>
           </div>
