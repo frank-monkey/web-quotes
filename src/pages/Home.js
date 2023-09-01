@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div>
         <Link to="/favorites">View Favorites</Link> 
+        <Link to="/search">Search Quotes</Link> 
         <QuoteFetcher onNewQuote={handleNewQuote}/>
     </div>
     );
