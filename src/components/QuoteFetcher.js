@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import StarButton from './StarButton';
 import axios from 'axios';
+import Quote from './Quote';
 
 function QuoteFetcher() {
   const [quotes, setQuotes] = useState([]);
@@ -34,13 +34,7 @@ function QuoteFetcher() {
       <h2>Web Quotes</h2>
       <div className="quote-list">
         {quotes.map((quote, index) => (
-          <div key={index} className="quote">
-            <p className="quote-content">"{quote.content}"</p>
-            <div className="button-and-author">
-              <StarButton quoteId={quote._id}/>
-              <p className="quote-author">- {quote.author}</p> 
-            </div>
-          </div>
+          <Quote key={quote._id} quote={quote} />
         ))}
       </div>
       <div className="pagination">

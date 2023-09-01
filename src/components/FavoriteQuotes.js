@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import StarButton from './StarButton';
+import Quote from './Quote';
 
 function FavoriteQuotes() {
   const [starredQuotes, setStarredQuotes] = useState([]);
@@ -32,19 +32,7 @@ function FavoriteQuotes() {
       <h2>Favorite Quotes</h2>
       <div className="quote-list">
         {quoteDetails.map((quote, index) => (
-          <div key={index} className="quote">
-            {quote ? (
-              <>
-                <p className="quote-content">"{quote.content}"</p>
-                <div className="button-and-author">
-                  <StarButton quoteId={quote._id} />
-                  <p className="quote-author">- {quote.author}</p>
-                </div>
-              </>
-            ) : (
-              <p className="quote-content">Failed to fetch quote details</p>
-            )}
-          </div>
+          <Quote key={quote._id} quote={quote} />
         ))}
       </div>
     </div>

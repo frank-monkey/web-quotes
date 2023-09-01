@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import StarButton from './StarButton'; // Import the StarButton component
+import StarButton from './StarButton';
+import Quote from './Quote';
 
 const SearchQuotes = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -26,13 +27,7 @@ const SearchQuotes = () => {
 
       <div className="quote-list">
         {quotes.map((quote) => (
-          <div key={quote._id} className="quote">
-            <p className="quote-content">"{quote.content}"</p>
-            <div className="button-and-author">
-              <StarButton quoteId={quote._id} />
-              <p className="quote-author">- {quote.author}</p>
-            </div>
-          </div>
+          <Quote key={quote._id} quote={quote} />
         ))}
       </div>
     </div>
