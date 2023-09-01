@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
-import './App.css';
-import QuoteFetcher from './components/QuoteFetcher';
-import FavoriteQuotes from './components/FavoriteQuotes';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home'; 
+import Favorites from './pages/Favorites';
 
 function App() {
-  const [currentQuote, setCurrentQuote] = useState({ content: '', author: '' });
-
-  const handleNewQuote = (content, author) => {
-    setCurrentQuote({ content, author });
-  };
-
   return (
-    <div className="App">
-      <QuoteFetcher onNewQuote={handleNewQuote} />
-      <FavoriteQuotes/> 
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
