@@ -31,7 +31,7 @@ function QuoteFetcher() {
 
   return (
     <div className="quote-generator">
-      <h1>Random Quote Generator</h1>
+      <h2>Web Quotes</h2>
       <div className="quote-list">
         {quotes.map((quote, index) => (
           <div key={index} className="quote">
