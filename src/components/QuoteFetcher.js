@@ -31,7 +31,6 @@ function QuoteFetcher() {
 
   return (
     <div className="quote-generator">
-      <h2>Web Quotes</h2>
       <div className="quote-list">
         {quotes.map((quote, index) => (
           <Quote key={quote._id} quote={quote} />
