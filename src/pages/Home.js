@@ -4,7 +4,7 @@ import QuoteFetcher from '../components/QuoteFetcher';
 import '../App.css';
 
 const Home = () => {
-  const [currentQuote, setCurrentQuote] = useState({ content: '', author: '' });
+  const [setCurrentQuote] = useState({ content: '', author: '' });
 
   const handleNewQuote = (content, author) => {
     setCurrentQuote({ content, author });

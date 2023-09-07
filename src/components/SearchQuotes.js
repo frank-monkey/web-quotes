@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import StarButton from './StarButton';
 import Quote from './Quote';
 
 const SearchQuotes = () => {

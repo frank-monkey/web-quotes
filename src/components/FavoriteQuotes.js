@@ -3,7 +3,7 @@ import axios from 'axios';
 import Quote from './Quote';
 
 function FavoriteQuotes() {
-  const [starredQuotes, setStarredQuotes] = useState([]);
+  const [setStarredQuotes] = useState([]);
   const [quoteDetails, setQuoteDetails] = useState([]);
 
   useEffect(() => {
@@ -25,6 +25,7 @@ function FavoriteQuotes() {
 
     setStarredQuotes(fetchStarredQuotes);
     fetchQuoteDetails();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
