@@ -17,7 +17,8 @@ const SearchQuotes = () => {
   };
 
   return (
-    <div>
+    <div className="quote-generator">
+      <h2>Search Quotes</h2>
       <input
         type="text"
         value={searchTerm}
