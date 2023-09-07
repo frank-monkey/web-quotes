@@ -23,7 +23,6 @@ function FavoriteQuotes() {
       setQuoteDetails(details);
     };
 
-    setStarredQuotes(fetchStarredQuotes);
     fetchQuoteDetails();
       // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
