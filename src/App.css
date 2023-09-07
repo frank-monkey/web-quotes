@@ -114,3 +114,17 @@ input[type="text"] {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
+/* App.css or Home.css */
+.github-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-button img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
