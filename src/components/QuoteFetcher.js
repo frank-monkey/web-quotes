@@ -37,7 +37,7 @@ function QuoteFetcher() {
         ))}
       </div>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous Page</button>
+        <button onClick={prevPage} style={{visibility: currentPage === 1 ? 'hidden' : 'visible'}}>Previous Page</button>
         <button onClick={nextPage}>Next Page</button>
       </div>
     </div>
