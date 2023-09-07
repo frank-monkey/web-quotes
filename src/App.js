@@ -5,7 +5,7 @@ import Search from './pages/Search'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/web-quotes'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites />} />
