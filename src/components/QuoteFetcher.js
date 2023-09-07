@@ -21,11 +21,13 @@ function QuoteFetcher() {
 
   const nextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
+    window.scrollTo(0, 0);
   };
 
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage((prevPage) => prevPage - 1);
+      window.scrollTo(0, 0);
     }
   };
 
