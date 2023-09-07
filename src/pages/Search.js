@@ -5,7 +5,7 @@ import '../App.css';
 const Search = () => {
   return (
     <div>
-      <Link to="/">Go Home</Link>
+      <Link className="fancy-button" to="/">Go Home</Link>
       <SearchQuotes/>
     </div>
   );

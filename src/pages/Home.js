@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import QuoteFetcher from '../components/QuoteFetcher';
 import '../App.css';
-import './Home.css'; // Import a separate CSS file for component-specific styles
 
 const Home = () => {
   const [currentQuote, setCurrentQuote] = useState({ content: '', author: '' });
