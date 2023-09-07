@@ -9,7 +9,7 @@ const SearchQuotes = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://api.quotable.io/search/quotes?query=${searchTerm}`);
+      const response = await axios.get(`https://api.quotable.io/search/quotes?query=${searchTerm}&limit=150&fuzzyMaxEdits=1`);
       setQuotes(response.data.results);
     } catch (error) {
       console.error('Error searching quotes:', error);
